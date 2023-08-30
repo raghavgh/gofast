@@ -38,6 +38,12 @@ func (l *LRU) Get(key string) (any, bool) {
 func (l *LRU) Put(key string, val any) {
 	l.mu.Lock()
 	defer l.mu.Unlock()
+	// handling the case of existing key update
+	if element, ok := l.items[key]; ok {
+		l.eviction.MoveToFront(element)
+		element.Val.(*entry).value = val
+		return
+	}
 
 	if l.eviction.Len() >= l.limit {
 		delete(l.items, l.eviction.Tail.Val.(*entry).key)
