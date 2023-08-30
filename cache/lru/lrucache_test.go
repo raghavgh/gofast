@@ -66,6 +66,37 @@ func TestCache(t *testing.T) {
 			t.Errorf("Expected key '0' to be evicted")
 		}
 	})
+
+	t.Run("UpdateExistingKey", func(t *testing.T) {
+		key := "key1"
+		initialVal := "value1"
+		updatedVal := "value2"
+		cache.Put(key, initialVal)
+
+		cache.Put(key, updatedVal) // Updating the value of the existing key
+
+		v, ok := cache.Get(key)
+		if !ok || v != updatedVal {
+			t.Errorf("Expected updated value %v, got %v", updatedVal, v)
+		}
+	})
+
+	t.Run("Evict", func(t *testing.T) {
+		cache.Clear()
+
+		for i := 0; i < cache.limit; i++ {
+			key := strconv.Itoa(i)
+			cache.Put(key, "value")
+		}
+
+		// This should replace the value of key "0" rather than evicting it
+		cache.Put("0", "newValue")
+
+		v, ok := cache.Get("0")
+		if !ok || v != "newValue" {
+			t.Errorf("Expected key '0' to be updated rather than evicted")
+		}
+	})
 }
 
 func TestCache_Concurrent(t *testing.T) {
