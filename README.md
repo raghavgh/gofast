@@ -37,6 +37,7 @@ Clear()
 // Contains returns true if the cache contains the given key
 Contains(key string) bool
 ```
+  **All above funtions are thread safe
 
 5. Currently Available cache algorithms
   a. LRU
