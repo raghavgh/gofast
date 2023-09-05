@@ -3,9 +3,11 @@ This module prvide some easy to use inmemory cache algorithms implementations in
 
 # How To use them?
 1. Import it using this command
-   go get github.com/raghavgh/gofast
+```
+$ go get github.com/raghavgh/gofast
+```
 
-2. Code eg. you can use given cache interface like this
+3. Code eg. you can use given cache interface like this
 ```go
 import "github.com/raghavgh/gofast"
 
