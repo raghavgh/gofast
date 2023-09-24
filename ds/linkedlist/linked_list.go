@@ -30,7 +30,7 @@ func (l *LinkedList) Len() int {
 }
 
 // PushFront inserts a new node with given val at the front of the list
-func (l *LinkedList) PushFront(val any) {
+func (l *LinkedList) PushFront(val any) *Node {
 	node := newNode(val)
 	if l.len == 0 {
 		l.Head, l.Tail = node, node
@@ -38,10 +38,11 @@ func (l *LinkedList) PushFront(val any) {
 		node.Next, l.Head.Prev, l.Head = l.Head, node, node
 	}
 	l.len++
+	return node
 }
 
 // PushBack inserts a new node with given val at the back of the list
-func (l *LinkedList) PushBack(val any) {
+func (l *LinkedList) PushBack(val any) *Node {
 	node := newNode(val)
 	if l.len == 0 {
 		l.Head, l.Tail = node, node
@@ -49,6 +50,7 @@ func (l *LinkedList) PushBack(val any) {
 		l.Tail.Next, node.Prev, l.Tail = node, l.Tail, node
 	}
 	l.len++
+	return node
 }
 
 // MoveToFront moves node to the front of the list
@@ -129,7 +131,7 @@ func (l *LinkedList) Remove(node *Node) {
 }
 
 // InsertAfter adds a new node with the given value after a provided node
-func (l *LinkedList) InsertAfter(after *Node, val any) {
+func (l *LinkedList) InsertAfter(after *Node, val any) *Node {
 	// Create new node
 	node := newNode(val)
 
@@ -152,10 +154,11 @@ func (l *LinkedList) InsertAfter(after *Node, val any) {
 	}
 	// Increase length of list
 	l.len++
+	return node
 }
 
 // InsertBefore adds a new node with the given value before a provided node
-func (l *LinkedList) InsertBefore(before *Node, val any) {
+func (l *LinkedList) InsertBefore(before *Node, val any) *Node {
 	// Create new node
 	node := newNode(val)
 
@@ -178,6 +181,7 @@ func (l *LinkedList) InsertBefore(before *Node, val any) {
 	}
 	// Increase length of list
 	l.len++
+	return node
 }
 
 // Clear removes all nodes from the list.
