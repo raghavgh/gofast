@@ -1,28 +1,36 @@
 # gofast
-This module prvide some easy to use inmemory cache algorithms implementations in golang like LRU, to use it you can simply import and use it. Follow given below instruction to use.
 
-# How To use them?
-1. Import it using this command
-```
+gofast is a Go module that provides easy-to-use in-memory cache algorithms like LRU (Least Recently Used). It allows you to import and use these algorithms simply and directly in your Go projects.
+
+## Installation
+
+Install gofast by simply using the `go get` command:
+
+```bash
 $ go get github.com/raghavgh/gofast
 ```
 
-3. Code eg. you can use given cache interface like this
+## Usage
+### Importing the module
+First, import gofast like this:
+
 ```go
 import "github.com/raghavgh/gofast"
-
+```
+Here is an example of how you can use the module:
+```go
 type CacheRepo struct {
-	MetaCache gofast.Cache
+    MetaCache gofast.Cache
 }
 
 func NewCacheRepo() *CacheRepo {
-	return &CacheRepo{
-		// 1 is algortithm type
-		MetaCache: gofast.NewCache(1000, gofast.LRU),
-	}
+    return &CacheRepo{
+        // 1 is the algorithm type for LRU
+        MetaCache: gofast.NewCache(1000, gofast.LRU),
+    }
 }
-  ```
-3. Available Operations currently
+```
+### Available Functions
 ```go
 // Get returns the value (if any) and a boolean representing whether the value was found or not
 Get(key string) (any, bool)
@@ -39,27 +47,25 @@ Contains(key string) bool
 ```
   **All above funtions are thread safe
 
-5. Currently Available cache algorithms
-  a. LRU
-  LFU and more number of algorithms will be available soon in new versions wait for it.
+### Available Cache Algorithms
+Currently, the following cache algorithms are available:
 
-6. Given Algorithm types
+1. LRU (Least Recently Used)
+
+2. LFU (Least Frequently Used)
+
+More algorithms will be available in future versions.
+
+Supported algorithms can be specified with the following constants:
 
 ```go
-// LRU is the least recently used cache algorithm.
-LRU
-// LFU is the least frequently used cache algorithm.
-LFU
-// FIFO is the first in first out cache algorithm.
-FIFO
-// MRU is the most recently used cache algorithm.
-MRU
-// RR is the random replacement cache algorithm.
-RR
-// SLRU is the segmented least recently used cache algorithm.
-SLRU
-// LIFO is the last in first out cache algorithm.
-LIFO
+gofast.LRU   // Least Recently Used algorithm
+gofast.LFU   // Least Frequently Used algorithm
+gofast.FIFO  // First In, First Out algorithm
+gofast.MRU   // Most Recently Used algorithm
+gofast.RR    // Random Replacement algorithm
+gofast.SLRU  // Segmented Least Recently Used algorithm
+gofast.LIFO  // Last In, First Out algorithm
 ```
-# Want to contribute?
-Contributions will be welcomed very soon.
+## Contributions
+More details regarding contributing will be provided soon. We look forward to your valuable inputs!
