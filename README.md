@@ -52,7 +52,7 @@ Currently, the following cache algorithms are available:
 
 1. LRU (Least Recently Used)
 
-2. LFU (Least Frequently Used)
+Working on LFU (Least Frequently Used) (Coming Soon)
 
 More algorithms will be available in future versions.
 
