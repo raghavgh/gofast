@@ -54,6 +54,8 @@ Currently, the following cache algorithms are available:
 
 Working on LFU (Least Frequently Used) (Coming Soon)
 
+3. LIFO (Last In, First Out)
+
 More algorithms will be available in future versions.
 
 Supported algorithms can be specified with the following constants:
