@@ -1,5 +1,6 @@
 package gofast
 
+// Cache is the interface that wraps the basic operations of a cache.
 type Cache interface {
 	// Get returns the value (if any) and a boolean representing whether the value was found or not
 	Get(key string) (any, bool)
