@@ -52,7 +52,7 @@ Currently, the following cache algorithms are available:
 
 1. LRU (Least Recently Used)
 
-Working on LFU (Least Frequently Used) (Coming Soon)
+2. LFU (Least Frequently Used)
 
 3. LIFO (Last In, First Out)
 
