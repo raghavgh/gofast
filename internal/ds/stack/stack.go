@@ -1,6 +1,8 @@
 package stack
 
-import "github.com/raghavgh/gofast/ds/linkedlist"
+import (
+	"github.com/raghavgh/gofast/internal/ds/linkedlist"
+)
 
 // Stack wraps a linked list data structure to form a stack
 // with optional deletion of arbitrary elements.

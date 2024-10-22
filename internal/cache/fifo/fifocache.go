@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/raghavgh/gofast/ds/queue"
+	"github.com/raghavgh/gofast/internal/ds/queue"
 )
 
 type Fifo struct {

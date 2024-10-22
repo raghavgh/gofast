@@ -1,6 +1,8 @@
 package queue
 
-import "github.com/raghavgh/gofast/ds/linkedlist"
+import (
+	"github.com/raghavgh/gofast/internal/ds/linkedlist"
+)
 
 // List wraps a linked list data structure to form a queue
 // with optional deletion of arbitrary elements.

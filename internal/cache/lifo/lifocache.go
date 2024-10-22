@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/raghavgh/gofast/ds/stack"
+	"github.com/raghavgh/gofast/internal/ds/stack"
 )
 
 // Lifo represents a lifo cache.

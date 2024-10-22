@@ -3,7 +3,7 @@ package lfu
 import (
 	"sync"
 
-	"github.com/raghavgh/gofast/ds/linkedlist"
+	"github.com/raghavgh/gofast/internal/ds/linkedlist"
 )
 
 type LFU struct {
