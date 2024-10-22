@@ -25,7 +25,8 @@ type CacheRepo struct {
 
 func NewCacheRepo() *CacheRepo {
     return &CacheRepo{
-        // 1 is the algorithm type for LRU
+        // gofast.LRU is the algorithm type for LRU.
+	// 1000 is limit of your cache.
         MetaCache: gofast.NewCache(1000, gofast.LRU),
     }
 }
@@ -55,6 +56,8 @@ Currently, the following cache algorithms are available:
 2. LFU (Least Frequently Used)
 
 3. LIFO (Last In, First Out)
+
+4. FIFO (First In, First Out) 
 
 More algorithms will be available in future versions.
 
