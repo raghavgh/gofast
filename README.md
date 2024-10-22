@@ -72,5 +72,22 @@ gofast.RR    // Random Replacement algorithm
 gofast.SLRU  // Segmented Least Recently Used algorithm
 gofast.LIFO  // Last In, First Out algorithm
 ```
-## Contributions
-More details regarding contributing will be provided soon. We look forward to your valuable inputs!
+## 🤝 Contributions Welcome!
+We’re excited to have you contribute to the gofast library! Whether you’re fixing bugs 🐛, adding new features ✨, improving documentation 📚, or enhancing test coverage 🧪—we’d love your help!
+
+#### How to Get Started:
+
+1. 🍴 Fork the repository and create your feature branch (git checkout -b feature/AmazingFeature).
+2. 🛠️ Make your changes and commit them (git commit -m 'Add some AmazingFeature').
+3. ⏫ Push to the branch (git push origin feature/AmazingFeature).
+4. 🔍 Open a pull request, and we’ll review it as soon as possible!
+
+#### Looking for Ideas?
+
+Check out our [issues page](https://github.com/raghavgh/gofast/issues) for a list of open tasks or feel free to suggest your own improvements! We’re especially interested in:
+
+- 🧩 Implementing new cache algorithms (e.g., MRU). 
+- 🔍 Adding more unit tests for better coverage. 
+- ⚡ Improving performance with enhanced benchmarking.
+
+We look forward to your valuable contributions and ideas 💡! Let’s make gofast even faster together! 🎉
