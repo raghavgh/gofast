@@ -3,7 +3,7 @@ package lru
 import (
 	"sync"
 
-	"github.com/raghavgh/gofast/ds/linkedlist"
+	"github.com/raghavgh/gofast/internal/ds/linkedlist"
 )
 
 // LRU represents a thread-safe, least recently used cache.

@@ -1,9 +1,9 @@
 package gofast
 
 import (
-	"github.com/raghavgh/gofast/cache/fifo"
-	"github.com/raghavgh/gofast/cache/lifo"
-	"github.com/raghavgh/gofast/cache/lru"
+	"github.com/raghavgh/gofast/internal/cache/fifo"
+	"github.com/raghavgh/gofast/internal/cache/lifo"
+	"github.com/raghavgh/gofast/internal/cache/lru"
 )
 
 type Algorithm int
