@@ -25,6 +25,7 @@ func NewFifo(limit int) *Fifo {
 	if limit <= 0 {
 		log.Fatal("Limit should be greater than 0")
 	}
+
 	return &Fifo{
 		items:             make(map[string]*entry),
 		queueEvictionList: queue.NewQueueList(true),
@@ -41,6 +42,7 @@ func (f *Fifo) Get(key string) (any, bool) {
 	if element, ok := f.items[key]; ok {
 		return element.value, true
 	}
+
 	return nil, false
 }
 
