@@ -1,6 +1,10 @@
 package gofast
 
-import "github.com/raghavgh/gofast/cache/lru"
+import (
+	"github.com/raghavgh/gofast/cache/fifo"
+	"github.com/raghavgh/gofast/cache/lifo"
+	"github.com/raghavgh/gofast/cache/lru"
+)
 
 type Algorithm int
 
@@ -30,6 +34,12 @@ func NewCache(limit int, algo Algorithm) Cache {
 	switch algo {
 	case LRU:
 		return lru.NewLRU(limit)
+	case FIFO:
+		return fifo.NewFifo(limit)
+	case LFU:
+		return lifo.NewLifo(limit)
+	case LIFO:
+		return lifo.NewLifo(limit)
 	default:
 		return lru.NewLRU(limit)
 	}
