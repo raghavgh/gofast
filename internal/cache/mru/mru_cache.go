@@ -99,7 +99,7 @@ func (m *MRU) Contains(key string) bool {
 	return ok
 }
 
-// NewMRU creates a new LRU cache with the maximum size based on configuration.
+// NewMRU creates a new MRU cache with the maximum size based on configuration.
 func NewMRU(limit int) *MRU {
 	if limit <= 0 {
 		panic("cache limit must be greater than 0")
