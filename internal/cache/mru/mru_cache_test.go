@@ -58,13 +58,18 @@ func TestCache(t *testing.T) {
 			cache.Put(key, "value")
 		}
 
-		// This should trigger an eviction of key "0"
+		// This should trigger an eviction of key "9"
 		cache.Put("new", "value")
 
 		mostRecentAddedItemKey := strconv.Itoa(cache.limit - 1)
 		_, ok := cache.Get(mostRecentAddedItemKey)
 		if ok {
-			t.Errorf("Expected key '0' to be evicted")
+			t.Errorf("Expected key '%s' to be evicted", mostRecentAddedItemKey)
+		}
+
+		_, ok = cache.Get("0")
+		if !ok {
+			t.Errorf("Expected key '0' to still be present")
 		}
 	})
 
