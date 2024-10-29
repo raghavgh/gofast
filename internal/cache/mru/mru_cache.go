@@ -76,7 +76,7 @@ func (m *MRU) Remove(key string) {
 // Len returns the number of items in the cache.
 func (m *MRU) Len() int {
 	m.mu.RLock()
-	defer m.mu.Unlock()
+	defer m.mu.RUnlock()
 
 	return m.eviction.Len()
 }
@@ -93,7 +93,7 @@ func (m *MRU) Clear() {
 // Contains checks if a key is present in the cache.
 func (m *MRU) Contains(key string) bool {
 	m.mu.RLock()
-	defer m.mu.Unlock()
+	defer m.mu.RUnlock()
 
 	_, ok := m.items[key]
 	return ok
