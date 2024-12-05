@@ -2,6 +2,14 @@
 
 gofast is a Go module that provides easy-to-use in-memory cache algorithms like LRU (Least Recently Used). It allows you to import and use these algorithms simply and directly in your Go projects.
 
+## Key Features:
+1. <B>High Speed</B> : Optimized for low-latency operations, making it one of the fastest in-memory caching solutions available.
+2. <B>Thread-Safe</B> : Designed with concurrency in mind, allowing multiple goroutines to safely access and modify the cache.
+3. <B>Simple API</B> : Offers a straightforward and easy-to-use API for basic caching operations like Get, Set, and Remove.
+4. <B>Customizable Eviction Policy</B>: Supports options like LRU (Least Recently Used) for memory management when cache size reaches its limit.
+5. <B>Lightweight</B> : Minimal external dependencies, ensuring a lean and performant implementation.
+6. <B>Custom Optimized Data Structures</B> : Leverages its own highly efficient in-built data structures, specifically tailored for time efficiency and reduced overhead, giving it a competitive edge in speed and performance.
+
 ## Installation
 
 Install gofast by simply using the `go get` command:
