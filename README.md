@@ -57,7 +57,9 @@ Currently, the following cache algorithms are available:
 
 3. LIFO (Last In, First Out)
 
-4. FIFO (First In, First Out) 
+4. FIFO (First In, First Out)
+
+5. MRU (Most Recently Used) 
 
 More algorithms will be available in future versions.
 
